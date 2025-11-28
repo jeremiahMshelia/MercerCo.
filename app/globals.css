@@ -52,8 +52,16 @@
 }
 
 body {
-  background: var(--background);
+  background: #000000;
+  /* Fixes Safari overscroll white bars */
   color: var(--foreground);
   font-family: var(--font-cabinet);
   overscroll-behavior-y: none;
+}
+
+/* Ensure the main app content sits on a white background */
+main {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
 }

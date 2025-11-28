@@ -18,7 +18,9 @@ export default function RootLayout({
       <body className="antialiased">
         <ViewportProvider>
           <Preloader />
-          {children}
+          <main className="bg-white min-h-screen relative z-10">
+            {children}
+          </main>
         </ViewportProvider>
       </body>
     </html>
