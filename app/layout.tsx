@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   description: "Facilitating the acquisition of the world's most significant assets. A curated portfolio of off-market listings and expert advisory for the discerning client.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
