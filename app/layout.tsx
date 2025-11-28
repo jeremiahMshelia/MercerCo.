@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Preloader from "@/components/Preloader";
+import ViewportProvider from "@/components/ViewportProvider";
 
 export const metadata: Metadata = {
   title: "Mercer & Co. | The Private Office",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <Preloader />
-        {children}
+        <ViewportProvider>
+          <Preloader />
+          {children}
+        </ViewportProvider>
       </body>
     </html>
   );

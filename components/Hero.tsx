@@ -9,9 +9,10 @@ export default function Hero() {
     const [location, setLocation] = useState("New York");
     const [residence, setResidence] = useState("Penthouse");
     const [budget, setBudget] = useState("Any Price");
+    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
     return (
-        <section id="home" className="relative w-full px-4 md:px-12 pb-8">
+        <section id="home" className="relative w-full px-4 md:px-12 pb-8 bg-black">
             <div className="relative w-full h-[85vh] rounded-[2rem]">
                 {/* Background Container (Clipped) */}
                 <div className="absolute inset-0 rounded-[2rem] overflow-hidden">
@@ -45,20 +46,27 @@ export default function Hero() {
 
                         <div className="flex items-center gap-4 md:gap-6 px-4 md:px-5 py-4 md:py-7">
                             {/* Intent */}
-                            <div className="flex flex-col gap-0.5 cursor-pointer group relative">
+                            <div
+                                className="flex flex-col gap-0.5 cursor-pointer relative"
+                                onClick={() => setActiveDropdown(activeDropdown === "Intent" ? null : "Intent")}
+                            >
                                 <span className="text-[12px] md:text-[14px] font-light tracking-wide text-white/80">Intent</span>
                                 <div className="flex items-center gap-2 text-white text-[14px] md:text-[16px] font-normal whitespace-nowrap">
-                                    {intent} <ChevronDown className="w-3 h-3 md:w-3.5 md:h-3.5 text-white/80 group-hover:text-white transition-colors" />
+                                    {intent} <ChevronDown className={`w-3 h-3 md:w-3.5 md:h-3.5 text-white/80 transition-transform duration-300 ${activeDropdown === "Intent" ? "rotate-180 text-white" : ""}`} />
                                 </div>
 
                                 {/* Dropdown */}
-                                <div className="absolute top-full left-0 pt-4 w-32 hidden group-hover:block transition-all z-[100]">
+                                <div className={`absolute top-full left-0 pt-4 w-32 transition-all z-[100] ${activeDropdown === "Intent" ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
                                     <div className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                                         <div className="py-2">
                                             {["Buy", "Rent", "Sell"].map((item) => (
                                                 <div
                                                     key={item}
-                                                    onClick={() => setIntent(item)}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setIntent(item);
+                                                        setActiveDropdown(null);
+                                                    }}
                                                     className="px-4 py-2 hover:bg-white/10 text-white text-sm transition-colors"
                                                 >
                                                     {item}
@@ -70,20 +78,27 @@ export default function Hero() {
                             </div>
 
                             {/* Location */}
-                            <div className="flex flex-col gap-0.5 cursor-pointer group relative">
+                            <div
+                                className="flex flex-col gap-0.5 cursor-pointer relative"
+                                onClick={() => setActiveDropdown(activeDropdown === "Location" ? null : "Location")}
+                            >
                                 <span className="text-[12px] md:text-[14px] font-light tracking-wide text-white/80">Location</span>
                                 <div className="flex items-center gap-2 text-white text-[14px] md:text-[16px] font-normal whitespace-nowrap">
-                                    {location} <ChevronDown className="w-3 h-3 md:w-3.5 md:h-3.5 text-white/80 group-hover:text-white transition-colors" />
+                                    {location} <ChevronDown className={`w-3 h-3 md:w-3.5 md:h-3.5 text-white/80 transition-transform duration-300 ${activeDropdown === "Location" ? "rotate-180 text-white" : ""}`} />
                                 </div>
 
                                 {/* Dropdown */}
-                                <div className="absolute top-full left-0 pt-4 w-40 hidden group-hover:block transition-all z-[100]">
+                                <div className={`absolute top-full left-0 pt-4 w-40 transition-all z-[100] ${activeDropdown === "Location" ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
                                     <div className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                                         <div className="py-2">
                                             {["New York", "Los Angeles", "Miami", "London"].map((item) => (
                                                 <div
                                                     key={item}
-                                                    onClick={() => setLocation(item)}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setLocation(item);
+                                                        setActiveDropdown(null);
+                                                    }}
                                                     className="px-4 py-2 hover:bg-white/10 text-white text-sm transition-colors"
                                                 >
                                                     {item}
@@ -95,20 +110,27 @@ export default function Hero() {
                             </div>
 
                             {/* Residence - Hidden on mobile */}
-                            <div className="hidden md:flex flex-col gap-0.5 cursor-pointer group relative">
+                            <div
+                                className="hidden md:flex flex-col gap-0.5 cursor-pointer relative"
+                                onClick={() => setActiveDropdown(activeDropdown === "Residence" ? null : "Residence")}
+                            >
                                 <span className="text-[14px] font-light tracking-wide text-white/80">Residence</span>
                                 <div className="flex items-center gap-2 text-white text-[16px] font-normal whitespace-nowrap">
-                                    {residence} <ChevronDown className="w-3.5 h-3.5 text-white/80 group-hover:text-white transition-colors" />
+                                    {residence} <ChevronDown className={`w-3.5 h-3.5 text-white/80 transition-transform duration-300 ${activeDropdown === "Residence" ? "rotate-180 text-white" : ""}`} />
                                 </div>
 
                                 {/* Dropdown */}
-                                <div className="absolute top-full left-0 pt-4 w-40 hidden group-hover:block transition-all z-[100]">
+                                <div className={`absolute top-full left-0 pt-4 w-40 transition-all z-[100] ${activeDropdown === "Residence" ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
                                     <div className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                                         <div className="py-2">
                                             {["Penthouse", "Villa", "Apartment", "Estate"].map((item) => (
                                                 <div
                                                     key={item}
-                                                    onClick={() => setResidence(item)}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setResidence(item);
+                                                        setActiveDropdown(null);
+                                                    }}
                                                     className="px-4 py-2 hover:bg-white/10 text-white text-sm transition-colors"
                                                 >
                                                     {item}
@@ -120,20 +142,27 @@ export default function Hero() {
                             </div>
 
                             {/* Budget - Hidden on mobile */}
-                            <div className="hidden md:flex flex-col gap-0.5 cursor-pointer group relative">
+                            <div
+                                className="hidden md:flex flex-col gap-0.5 cursor-pointer relative"
+                                onClick={() => setActiveDropdown(activeDropdown === "Budget" ? null : "Budget")}
+                            >
                                 <span className="text-[14px] font-light tracking-wide text-white/80">Budget</span>
                                 <div className="flex items-center gap-2 text-white text-[16px] font-normal whitespace-nowrap">
-                                    {budget} <ChevronDown className="w-3.5 h-3.5 text-white/80 group-hover:text-white transition-colors" />
+                                    {budget} <ChevronDown className={`w-3.5 h-3.5 text-white/80 transition-transform duration-300 ${activeDropdown === "Budget" ? "rotate-180 text-white" : ""}`} />
                                 </div>
 
                                 {/* Dropdown */}
-                                <div className="absolute top-full right-0 pt-4 w-40 hidden group-hover:block transition-all z-[100]">
+                                <div className={`absolute top-full right-0 pt-4 w-40 transition-all z-[100] ${activeDropdown === "Budget" ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
                                     <div className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                                         <div className="py-2">
                                             {["Any Price", "< $1M", "$1M - $5M", "> $5M"].map((item) => (
                                                 <div
                                                     key={item}
-                                                    onClick={() => setBudget(item)}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setBudget(item);
+                                                        setActiveDropdown(null);
+                                                    }}
                                                     className="px-4 py-2 hover:bg-white/10 text-white text-sm transition-colors"
                                                 >
                                                     {item}

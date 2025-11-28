@@ -88,27 +88,35 @@ export default function StrategicIntelligence() {
                 {/* Right Column: Stats Grid */}
                 <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 h-full">
                     {/* Card 1 */}
-                    <div className="bg-[#E6E6E6] rounded-[32px] p-6 flex flex-col justify-center items-center text-center w-[320px] h-[120px] md:w-full md:h-full transition-colors duration-500 hover:bg-black group cursor-default opacity-0 mx-auto">
-                        <span className="text-[33px] md:text-5xl font-medium text-black group-hover:text-white transition-colors duration-500 mb-2">$125M+</span>
-                        <span className="text-black/70 group-hover:text-white/70 transition-colors duration-500 text-sm font-medium">Quarterly Sales Volume</span>
+                    <div
+                        className={`bg-[#E6E6E6] rounded-[32px] p-6 flex flex-col justify-center items-center text-center w-[320px] h-[120px] md:w-full md:h-full transition-colors duration-500 hover:bg-black group cursor-pointer opacity-0 mx-auto active:bg-black active:scale-95 md:active:scale-100`}
+                    >
+                        <span className="text-[33px] md:text-5xl font-medium text-black group-hover:text-white group-active:text-white transition-colors duration-500 mb-2">$125M+</span>
+                        <span className="text-black/70 group-hover:text-white/70 group-active:text-white/70 transition-colors duration-500 text-sm font-medium">Quarterly Sales Volume</span>
                     </div>
 
                     {/* Card 2 */}
-                    <div className="bg-[#E6E6E6] rounded-[32px] p-6 flex flex-col justify-center items-center text-center w-[320px] h-[120px] md:w-full md:h-full transition-colors duration-500 hover:bg-black group cursor-default opacity-0 mx-auto">
-                        <span className="text-[33px] md:text-5xl font-medium text-black group-hover:text-white transition-colors duration-500 mb-2">19 Days</span>
-                        <span className="text-black/70 group-hover:text-white/70 transition-colors duration-500 text-sm font-medium">Average Days On Market</span>
+                    <div
+                        className={`bg-[#E6E6E6] rounded-[32px] p-6 flex flex-col justify-center items-center text-center w-[320px] h-[120px] md:w-full md:h-full transition-colors duration-500 hover:bg-black group cursor-pointer opacity-0 mx-auto active:bg-black active:scale-95 md:active:scale-100`}
+                    >
+                        <span className="text-[33px] md:text-5xl font-medium text-black group-hover:text-white group-active:text-white transition-colors duration-500 mb-2">19 Days</span>
+                        <span className="text-black/70 group-hover:text-white/70 group-active:text-white/70 transition-colors duration-500 text-sm font-medium">Average Days On Market</span>
                     </div>
 
                     {/* Card 3 */}
-                    <div className="bg-[#E6E6E6] rounded-[32px] p-6 flex flex-col justify-center items-center text-center w-[320px] h-[120px] md:w-full md:h-full transition-colors duration-500 hover:bg-black group cursor-default opacity-0 mx-auto">
-                        <span className="text-[33px] md:text-5xl font-medium text-black group-hover:text-white transition-colors duration-500 mb-2">98.5%</span>
-                        <span className="text-black/70 group-hover:text-white/70 transition-colors duration-500 text-sm font-medium">List-To-Sale Price Ratio</span>
+                    <div
+                        className={`bg-[#E6E6E6] rounded-[32px] p-6 flex flex-col justify-center items-center text-center w-[320px] h-[120px] md:w-full md:h-full transition-colors duration-500 hover:bg-black group cursor-pointer opacity-0 mx-auto active:bg-black active:scale-95 md:active:scale-100`}
+                    >
+                        <span className="text-[33px] md:text-5xl font-medium text-black group-hover:text-white group-active:text-white transition-colors duration-500 mb-2">98.5%</span>
+                        <span className="text-black/70 group-hover:text-white/70 group-active:text-white/70 transition-colors duration-500 text-sm font-medium">List-To-Sale Price Ratio</span>
                     </div>
 
                     {/* Card 4 */}
-                    <div className="bg-[#E6E6E6] rounded-[32px] p-6 flex flex-col justify-center items-center text-center w-[320px] h-[120px] md:w-full md:h-full transition-colors duration-500 hover:bg-black group cursor-default opacity-0 mx-auto">
-                        <span className="text-[33px] md:text-5xl font-medium text-black group-hover:text-white transition-colors duration-500 mb-2">450+</span>
-                        <span className="text-black/70 group-hover:text-white/70 transition-colors duration-500 text-sm font-medium">Private Client Network</span>
+                    <div
+                        className={`bg-[#E6E6E6] rounded-[32px] p-6 flex flex-col justify-center items-center text-center w-[320px] h-[120px] md:w-full md:h-full transition-colors duration-500 hover:bg-black group cursor-pointer opacity-0 mx-auto active:bg-black active:scale-95 md:active:scale-100`}
+                    >
+                        <span className="text-[33px] md:text-5xl font-medium text-black group-hover:text-white group-active:text-white transition-colors duration-500 mb-2">450+</span>
+                        <span className="text-black/70 group-hover:text-white/70 group-active:text-white/70 transition-colors duration-500 text-sm font-medium">Private Client Network</span>
                     </div>
                 </div>
             </div>
