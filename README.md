@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mercer & Co. | The Private Office
 
-## Getting Started
+<br />
 
-First, run the development server:
+<div align="center">
+  <video src="/MercerCo_web.mp4" width="100%" controls autoplay loop muted></video>
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<br />
+
+## 💎 Overview
+
+**Mercer & Co.** is a concept luxury real estate application designed to showcase high-end properties with an emphasis on **premium aesthetics**, **fluid animations**, and **micro-interactions**.
+
+This project serves as a masterclass in modern web development, demonstrating how to build "wow" factor interfaces using Next.js and GSAP.
+
+## ✨ Key Features
+
+-   **Cinematic Preloader**: A custom "keyhole" zoom animation that seamlessly transitions into the hero section.
+-   **Advanced Animations**: Powered by **GSAP** (GreenSock), featuring scroll-triggered reveals, staggered entrances, and smooth hover effects.
+-   **Glassmorphism UI**: Extensive use of backdrop filters, subtle gradients, and transparency to create a modern, high-end feel.
+-   **Responsive Design**: Fully optimized for all devices, from large desktop displays to mobile screens, including a custom full-screen mobile menu.
+-   **Interactive Components**:
+    -   Draggable/Swipeable Property Collections.
+    -   Accordion-style Advisory section.
+    -   Dynamic "Sticky" Navbar that reacts to scroll direction.
+
+## 🛠️ Tech Stack
+
+-   **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Animations**: [GSAP](https://greensock.com/gsap/) & [Lucide React](https://lucide.dev/) (Icons)
+-   **Fonts**: [Geist](https://vercel.com/font) (Optimized by Vercel)
+
+## 🚀 Getting Started
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/mercer-and-co.git
+    cd mercer-and-co
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    # or
+    pnpm install
+    # or
+    yarn install
+    ```
+
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    # or
+    pnpm dev
+    ```
+
+4.  Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📂 Project Structure
+
+```
+├── app/                  # Next.js App Router pages & layouts
+├── components/           # Reusable UI components (Hero, Navbar, Footer, etc.)
+├── public/               # Static assets (images, videos, fonts)
+└── ...config files       # Tailwind, TypeScript, Next.js configs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚠️ License & Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**MIT License (Modified)**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is intended strictly for **EDUCATIONAL PURPOSES ONLY**.
 
-## Learn More
+-   ✅ **Allowed**: Learning, studying the code, forking for personal experiments.
+-   ❌ **Forbidden**: Selling this code, using it for commercial projects, or repackaging it as a template for sale.
 
-To learn more about Next.js, take a look at the following resources:
+Please respect the effort put into this design and codebase.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Crafted with precision.*
