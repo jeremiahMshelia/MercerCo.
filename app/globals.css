@@ -46,9 +46,17 @@
 
 
 
+html {
+  background-color: #000000;
+  /* The void behind the page is black */
+}
+
 body {
   background: var(--background);
+  /* The page itself is white */
   color: var(--foreground);
   font-family: var(--font-cabinet);
   overscroll-behavior-y: none;
+  min-height: 100vh;
+  /* Ensure body covers the html background */
 }
