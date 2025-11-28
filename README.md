@@ -37,7 +37,7 @@ This project serves as a masterclass in modern web development, demonstrating ho
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/mercer-and-co.git
+    git clone https://github.com/jeremiahMshelia/MercerCo..git
     cd mercer-and-co
     ```
 
