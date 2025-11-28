@@ -12,7 +12,7 @@ export default function Hero() {
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
     return (
-        <section id="home" className="relative w-full px-4 md:px-12 pb-8 bg-black">
+        <section id="home" className="relative w-full px-4 md:px-12 pb-8">
             <div className="relative w-full h-[85vh] rounded-[2rem]">
                 {/* Background Container (Clipped) */}
                 <div className="absolute inset-0 rounded-[2rem] overflow-hidden">
