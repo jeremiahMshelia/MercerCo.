@@ -44,24 +44,11 @@
   --font-sans: var(--font-cabinet);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
-  background: #000000;
-  /* Fixes Safari overscroll white bars */
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-cabinet);
   overscroll-behavior-y: none;
-}
-
-/* Ensure the main app content sits on a white background */
-main {
-  background-color: #ffffff;
-  position: relative;
-  z-index: 1;
 }

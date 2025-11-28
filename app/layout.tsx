@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Preloader from "@/components/Preloader";
 import ViewportProvider from "@/components/ViewportProvider";
 
 export const metadata: Metadata = {
@@ -17,10 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <ViewportProvider>
-          <Preloader />
-          <main className="bg-white min-h-screen relative z-10">
-            {children}
-          </main>
+          {children}
         </ViewportProvider>
       </body>
     </html>

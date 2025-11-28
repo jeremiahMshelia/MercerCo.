@@ -5,10 +5,12 @@ import StrategicIntelligence from "@/components/StrategicIntelligence";
 import GlobalReach from "@/components/GlobalReach";
 import Advisory from "@/components/Advisory";
 import Footer from "@/components/Footer";
+import Preloader from "@/components/Preloader";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-white">
+    <main className="w-full relative">
+      <Preloader />
       <Navbar />
       <Hero />
       <Collection />
