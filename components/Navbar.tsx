@@ -220,7 +220,7 @@ export default function Navbar() {
             {/* Full Screen Mobile Menu */}
             <div
                 ref={menuRef}
-                className="fixed top-0 left-0 w-full h-[var(--app-vh,100vh)] bg-black z-[200] flex flex-col items-center justify-center translate-y-[-100%]"
+                className="fixed top-0 left-0 w-full h-[120vh] bg-black z-[200] flex flex-col items-center justify-center translate-y-[-100%]"
             >
                 <div ref={linksRef} className="flex flex-col items-center gap-8">
                     {navLinks.map((link) => (

@@ -56,7 +56,7 @@ export default function Preloader() {
     return (
         <div
             ref={containerRef}
-            className="fixed top-0 left-0 w-full h-[var(--app-vh,100vh)] z-[9999] flex items-center justify-center pointer-events-none"
+            className="fixed top-0 left-0 w-full h-[120vh] z-[9999] flex items-center justify-center pointer-events-none"
         >
             {/* Pill Container (The Window) */}
             {/* box-shadow creates the black screen around the pill */}
